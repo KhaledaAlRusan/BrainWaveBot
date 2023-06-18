@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/app_navigator"
+    app:startDestination="@id/fragmentChooseList">
+
+    <fragment
+        android:id="@+id/fragmentChatting"
+        android:name="com.example.brainwavebot.presentation.features.chatting.FragmentChatting"
+        android:label="FragmentChatting" />
+    <fragment
+        android:id="@+id/fragmentChooseList"
+        android:name="com.example.brainwavebot.presentation.features.choosing.FragmentChooseList"
+        android:label="FragmentChooseList" >
+        <action
+            android:id="@+id/action_fragmentChooseList_to_fragmentChatting"
+            app:destination="@id/fragmentChatting" />
+    </fragment>
+</navigation>
